@@ -5,9 +5,18 @@ edition = "2024"
 publish = false
 
 [dependencies]
-axum = { version = "0.8", default-features = false, features = ["tokio", "http1"] }
-tokio = { version = "1", default-features = false, features = ["macros", "rt-multi-thread", "net"] }
+axum = { version = "0.8", default-features = false, features = [
+    "tokio",
+    "http1",
+] }
+tokio = { version = "1", default-features = false, features = [
+    "macros",
+    "rt-multi-thread",
+    "net",
+] }
 url = { version = "2", default-features = false }
+base64 = { version = "0.22" }
+tower-http = { version = "0.6", default-features = false, features = ["cors"] }
 
 [profile.release]
 strip = true
